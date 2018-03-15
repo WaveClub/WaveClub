@@ -1,0 +1,8 @@
+<login>
+	<login>Войти</login>
+	<password>Ваш пароль</password>
+	<password-forgotten>Забыли пароль?</password-forgotten>
+	<phone>Ваш телефон</phone>
+	<signup>Регистрация</signup>
+	<welcome>Добро пожаловать в WaveClub!</welcome>
+</login>
