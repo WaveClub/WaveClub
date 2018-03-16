@@ -17,14 +17,14 @@ sysinfo.txt
 # ===================================== #
 [Ee]xported[Oo]bj/
 .vs/
-/*.userprefs
+//*.userprefs
 /*.csproj
 /*.pidb
 *.pidb.meta
 /*.suo
 /*.sln*
 /*.user
-/*.unityproj
+//*.unityproj
 /*.booproj
 .consulo/
 /*.tmp
