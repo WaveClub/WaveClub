@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoginResponseModel {
+public class LoginResponseModel : BaseResponse {
 
 	public string access_token;
-	public int status_code;
 	public AccountModel account;
 }

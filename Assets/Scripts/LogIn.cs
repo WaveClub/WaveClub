@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LogIn : MonoBehaviour {
+	public Text welcomeText;
 
 	private const string xpath = "login";
 	private Dictionary<string, string> config;
@@ -15,5 +17,6 @@ public class LogIn : MonoBehaviour {
 	// Добавить привязку к полям?
 	public void LoadLocalization() {
 		config = LocalizationManager.getConfig (xpath);
+		welcomeText.text = config["welcome"];
 	}
 }
