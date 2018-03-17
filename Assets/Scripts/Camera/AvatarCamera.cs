@@ -9,24 +9,15 @@ public class AvatarCamera : MonoBehaviour, IPointerDownHandler {
 	public GameObject image;
 	public RawImage rawimage;
 
-	private WebCamTexture web;
-
 	void Start() {
-		WebCamDevice[] devices = WebCamTexture.devices;
-
-		web = new WebCamTexture ();
-		web.deviceName = devices.FirstOrDefault ().name;
-		rawimage.texture = web;
-		rawimage.material.mainTexture = web;
+		CameraManager.Instance.LinqCameraWithTextura (rawimage, image);
 	}
 
 	public void OnPointerDown(PointerEventData eventData) {
-		if (web.isPlaying) {
-			web.Stop ();
-			image.SetActive (false);
+		if (CameraManager.Instance.getCameraStatus()) {
+			CameraManager.Instance.StopCamera ();
 		} else {
-			web.Play ();
-			image.SetActive (true);
+			CameraManager.Instance.StartCamera ();
 		}
 	}
 }

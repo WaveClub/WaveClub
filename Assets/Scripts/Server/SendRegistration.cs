@@ -53,6 +53,13 @@ public class SendRegistration : MonoBehaviour, IPointerDownHandler {
 			return;
 		}
 
+		if (passwordField.text == "" || confirmPasswordField.text == "" || 
+			loginField.text == "" || nameField.text == "") {
+			message.SetActive (true);
+			messageText.text = "Все поля должны быть заполнены";
+			return;
+		}
+
 		RegistrationRequestModel credentials = new RegistrationRequestModel(loginField.text, nameField.text, passwordField.text, sex);
 		body = credentials.SaveToString();
 

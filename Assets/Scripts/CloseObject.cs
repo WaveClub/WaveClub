@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CloseMessage : MonoBehaviour, IPointerDownHandler {
-	public GameObject uiMessage;
+public class CloseObject : MonoBehaviour, IPointerDownHandler {
+	public GameObject gameObject;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +17,6 @@ public class CloseMessage : MonoBehaviour, IPointerDownHandler {
 	}
 
 	public void OnPointerDown(PointerEventData eventData) {
-		uiMessage.SetActive (false);
+		gameObject.SetActive (false);
 	}
 }
