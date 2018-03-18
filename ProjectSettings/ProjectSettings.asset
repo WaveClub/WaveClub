@@ -160,6 +160,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.WaveClub.WaveClub
     Standalone: com.WaveClub.WaveClub
+    iOS: com.WaveClub.WaveClub
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16

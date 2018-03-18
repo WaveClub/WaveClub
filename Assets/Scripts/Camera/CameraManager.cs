@@ -18,33 +18,47 @@ public class CameraManager {
 	}
 
 	private CameraManager() {
-		WebCamDevice[] devices = WebCamTexture.devices;
-
-		Camera = new WebCamTexture (devices.LastOrDefault ().name);
-		Camera.filterMode = FilterMode.Point;
+		WebCamDevice? device = WebCamTexture.devices.FirstOrDefault (d => d.isFrontFacing);
+		if (device.HasValue) {
+			Camera = new WebCamTexture (device.Value.name);
+			Camera.filterMode = FilterMode.Point;
+		}
 	}
 
 	public void LinqCameraWithTextura(RawImage image, GameObject texture) {
+		if (Camera == null)
+			return;
 		image.texture = Camera;
 		image.material.mainTexture = Camera;
 		Texture = texture;
 	}
 
 	public void StartCamera() {
-		if (Camera.isPlaying)
+		if (Camera == null || Camera.isPlaying)
 			return;
 		Camera.Play ();
 		Texture.SetActive (true);
 	}
 
 	public void StopCamera() {
-		if (!Camera.isPlaying)
+		if (Camera == null || !Camera.isPlaying)
 			return;
 		Camera.Stop ();
 		Texture.SetActive (false);
 	}
 
-	public bool getCameraStatus() {
+	public bool GetCameraStatus() {
+		if (Camera == null)
+			return false;
 		return Camera.isPlaying;
+	}
+
+	public void GetPhoto(RawImage image) {
+		var texture = new Texture2D (Camera.width, Camera.height);
+		texture.SetPixels (Camera.GetPixels ());
+
+		texture.Apply ();
+
+		image.texture = texture;
 	}
 }
