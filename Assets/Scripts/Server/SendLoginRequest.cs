@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class SendLoginRequest : MonoBehaviour, IPointerDownHandler {
+public class SendLoginRequest : MonoBehaviour, IPointerUpHandler, IPointerDownHandler {
 	public InputField phoneField;
 	public InputField passwordField;
 
@@ -41,10 +41,12 @@ public class SendLoginRequest : MonoBehaviour, IPointerDownHandler {
 		}
 	}
 
-	public void OnPointerDown(PointerEventData eventData) {
+	public void OnPointerUp(PointerEventData eventData) {
 		LoginRequestModel credentials = new LoginRequestModel (phoneField.text, passwordField.text);
 		body = credentials.SaveToString();
 
 		StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
 	}
+
+	public void OnPointerDown(PointerEventData eventData) {}
 }

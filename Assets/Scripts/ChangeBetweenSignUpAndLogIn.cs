@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ChangeBetweenSignUpAndLogIn : MonoBehaviour, IPointerDownHandler {
+public class ChangeBetweenSignUpAndLogIn : MonoBehaviour, IPointerUpHandler, IPointerDownHandler {
 	public GameObject signUp;
 	public GameObject logIn;
 
@@ -17,9 +17,11 @@ public class ChangeBetweenSignUpAndLogIn : MonoBehaviour, IPointerDownHandler {
 		
 	}
 
-	public void OnPointerDown(PointerEventData eventData){
+	public void OnPointerUp(PointerEventData eventData){
 		var active = signUp.activeSelf;
 		signUp.SetActive (!active);
 		logIn.SetActive (active);
 	}
+
+	public void OnPointerDown(PointerEventData eventData) {}
 }

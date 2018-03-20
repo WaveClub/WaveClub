@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class SendRegistration : MonoBehaviour, IPointerDownHandler {
+public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHandler {
 	public InputField loginField;
 	public InputField nameField;
 	public InputField passwordField;
@@ -44,7 +44,7 @@ public class SendRegistration : MonoBehaviour, IPointerDownHandler {
 		}
 	}
 
-	public void OnPointerDown(PointerEventData eventData) {
+	public void OnPointerUp(PointerEventData eventData) {
 		string sex = male.activeSelf ? "male" : "female";
 
 		if (passwordField.text != confirmPasswordField.text) {
@@ -65,4 +65,6 @@ public class SendRegistration : MonoBehaviour, IPointerDownHandler {
 
 		StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
 	}
+
+	public void OnPointerDown(PointerEventData eventData) {}
 }

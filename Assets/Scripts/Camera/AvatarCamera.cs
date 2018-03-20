@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class AvatarCamera : MonoBehaviour, IPointerDownHandler {
+public class AvatarCamera : MonoBehaviour, IPointerUpHandler, IPointerDownHandler {
 	public GameObject image;
 	public RawImage rawimage;
 	public Vector3 rotationObject;
@@ -14,7 +14,7 @@ public class AvatarCamera : MonoBehaviour, IPointerDownHandler {
 		CameraManager.Instance.LinqCameraWithTextura (rawimage, image);
 	}
 
-	public void OnPointerDown(PointerEventData eventData) {
+	public void OnPointerUp(PointerEventData eventData) {
 		if (CameraManager.Instance.GetCameraStatus()) {
 			CameraManager.Instance.StopCamera ();
 		} else {
@@ -31,4 +31,6 @@ public class AvatarCamera : MonoBehaviour, IPointerDownHandler {
 			transform.rotation = Quaternion.Euler (rotationObject);
 		#endif
 	}
+
+	public void OnPointerDown(PointerEventData eventData) {}
 }
