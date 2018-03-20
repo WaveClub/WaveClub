@@ -7,11 +7,11 @@ using UnityEngine.EventSystems;
 
 public class AvatarCamera : MonoBehaviour, IPointerUpHandler, IPointerDownHandler {
 	public GameObject image;
+	public GameObject avatarMask;
 	public RawImage rawimage;
-	public Vector3 rotationObject;
 
 	void Start() {
-		CameraManager.Instance.LinqCameraWithTextura (rawimage, image);
+		CameraManager.Instance.LinqCameraWithTextura (rawimage, image, avatarMask);
 	}
 
 	public void OnPointerUp(PointerEventData eventData) {
@@ -20,16 +20,6 @@ public class AvatarCamera : MonoBehaviour, IPointerUpHandler, IPointerDownHandle
 		} else {
 			CameraManager.Instance.StartCamera ();
 		}
-
-		#if UNITY_IPHONE
-			rotationObject = new Vector3 (0, 0, -90);
-			transform.rotation = Quaternion.Euler (rotationObject);
-		#endif
-
-		#if UNITY_ANDROID
-			rotationObject = new Vector3 (0, 0, 90);
-			transform.rotation = Quaternion.Euler (rotationObject);
-		#endif
 	}
 
 	public void OnPointerDown(PointerEventData eventData) {}

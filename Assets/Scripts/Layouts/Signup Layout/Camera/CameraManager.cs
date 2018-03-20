@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CameraManager {
 	private WebCamTexture Camera;
 	private GameObject Texture;
+	private GameObject AvatarMask;
 
 	private static CameraManager instance;
 	public static CameraManager Instance {
@@ -25,12 +26,13 @@ public class CameraManager {
 		}
 	}
 
-	public void LinqCameraWithTextura(RawImage image, GameObject texture) {
+	public void LinqCameraWithTextura(RawImage image, GameObject texture, GameObject mask) {
 		if (Camera == null)
 			return;
 		image.texture = Camera;
 		image.material.mainTexture = Camera;
 		Texture = texture;
+		AvatarMask = mask;
 	}
 
 	public void StartCamera() {
@@ -44,6 +46,8 @@ public class CameraManager {
 		if (Camera == null || !Camera.isPlaying)
 			return;
 		Camera.Stop ();
+
+		AvatarMask.SetActive (true);
 		Texture.SetActive (false);
 	}
 

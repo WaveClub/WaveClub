@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class SendLoginRequest : MonoBehaviour, IPointerUpHandler, IPointerDownHandler {
 	public InputField phoneField;
 	public InputField passwordField;
+	public Sprite incorrectFieldSprite;
 
 	public GameObject message;
 	public Text messageText;
@@ -32,7 +33,7 @@ public class SendLoginRequest : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 				break;
 
 			case (int) StatusCode.OK:
-				messageText.text = "Привет хз кто, Влад, добавь имя";
+				messageText.text = "Привет, " + responseData.account.name;
 				break;
 
 			}
@@ -41,7 +42,21 @@ public class SendLoginRequest : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 		}
 	}
 
+	public bool checkField() {
+		if (phoneField.text == "")
+			phoneField.image.sprite = incorrectFieldSprite;
+		if (passwordField.text == "")
+			passwordField.image.sprite = incorrectFieldSprite;
+
+		if (phoneField.text == "" || passwordField.text == "")
+			return true;
+		return false;
+	}
+
 	public void OnPointerUp(PointerEventData eventData) {
+		if (checkField ())
+			return;
+		
 		LoginRequestModel credentials = new LoginRequestModel (phoneField.text, passwordField.text);
 		body = credentials.SaveToString();
 

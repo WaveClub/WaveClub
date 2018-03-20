@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class WhatIt : MonoBehaviour {
+public class CameraRules : MonoBehaviour {
 	[SerializeField] private bool uniform = true;
 	[SerializeField] private bool autoSetUniform = true;
 

@@ -10,6 +10,7 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 	public InputField passwordField;
 	public InputField confirmPasswordField;
 	public GameObject male;
+	public Sprite incorrectFieldSprite;
 
 	public GameObject message;
 	public Text messageText;
@@ -44,21 +45,34 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 		}
 	}
 
-	public void OnPointerUp(PointerEventData eventData) {
-		string sex = male.activeSelf ? "male" : "female";
-
-		if (passwordField.text != confirmPasswordField.text) {
-			message.SetActive (true);
-			messageText.text = "Пароли не совпадают";
-			return;
-		}
+	public bool checkField() {
+		if (passwordField.text == "")
+			passwordField.image.sprite = incorrectFieldSprite;
+		if (confirmPasswordField.text == "")
+			confirmPasswordField.image.sprite = incorrectFieldSprite;
+		if (loginField.text == "")
+			loginField.image.sprite = incorrectFieldSprite;
+		if (nameField.text == "")
+			nameField.image.sprite = incorrectFieldSprite;
 
 		if (passwordField.text == "" || confirmPasswordField.text == "" || 
 			loginField.text == "" || nameField.text == "") {
-			message.SetActive (true);
-			messageText.text = "Все поля должны быть заполнены";
-			return;
+			return true;
 		}
+
+		if (passwordField.text != confirmPasswordField.text) {
+			confirmPasswordField.image.sprite = incorrectFieldSprite;
+			return true;
+		}
+
+		return false;
+	}
+
+	public void OnPointerUp(PointerEventData eventData) {
+		string sex = male.activeSelf ? "male" : "female";
+
+		if (checkField ())
+			return;
 
 		RegistrationRequestModel credentials = new RegistrationRequestModel(loginField.text, nameField.text, passwordField.text, sex);
 		body = credentials.SaveToString();
