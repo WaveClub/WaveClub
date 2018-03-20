@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class CloseCamera : MonoBehaviour, IPointerDownHandler {
+public class CloseCamera : MonoBehaviour, IPointerUpHandler {
 	public RawImage photoImage;
 	public Vector3 rotationObject;
 
@@ -21,7 +21,7 @@ public class CloseCamera : MonoBehaviour, IPointerDownHandler {
 		#endif
 	}
 
-	public void OnPointerDown(PointerEventData eventData) {
+	public void OnPointerUp(PointerEventData eventData) {
 		CameraManager.Instance.GetPhoto (photoImage);
 		CameraManager.Instance.StopCamera ();
 	}
