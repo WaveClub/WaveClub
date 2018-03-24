@@ -36,7 +36,6 @@ public class LocalizationManager : MonoBehaviour {
 				result.Add (child.Name, child.InnerText);
 			}
 		}
-
 		return result;
 	}
 }

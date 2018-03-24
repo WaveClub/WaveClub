@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LogIn : MonoBehaviour {
+public class LoginResource : MonoBehaviour {
 	public Text welcomeText;
-
-	private const string xpath = "login";
+	public Text passwordForgottenest;
+	public Text login;
+	public Text signUp;
+    public Text passwordField;
+    public Text loginField;
+    private const string xpath = "login";
 	private Dictionary<string, string> config;
 
 	// Use this for initialization
@@ -14,9 +18,17 @@ public class LogIn : MonoBehaviour {
 		LoadLocalization ();
 	}
 
-	// Добавить привязку к полям?
 	public void LoadLocalization() {
 		config = LocalizationManager.getConfig (xpath);
-		welcomeText.text = config["welcome"];
-	}
+        foreach (KeyValuePair<string, string> kvp in config)
+        {
+            Debug.Log(kvp.Value.ToString());
+        }
+        welcomeText.text = config["welcome"];
+		passwordForgottenest.text = config ["password-forgotten"];
+		signUp.text = config ["signup"];
+		login.text = config ["login"];
+        loginField.text = config["login-field"];
+        passwordField.text = config["password-field"];
+    }
 }

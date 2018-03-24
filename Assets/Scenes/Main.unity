@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 12598301}
   - component: {fileID: 12598300}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Password Field Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -731,7 +731,7 @@ GameObject:
   - component: {fileID: 144066171}
   - component: {fileID: 144066170}
   m_Layer: 5
-  m_Name: Password Forgotten Text
+  m_Name: Photo Upload
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -806,7 +806,7 @@ GameObject:
   - component: {fileID: 156379558}
   - component: {fileID: 156379557}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Registration Button Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -880,7 +880,7 @@ GameObject:
   - component: {fileID: 208697591}
   - component: {fileID: 208697590}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Login Field Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1028,7 +1028,7 @@ GameObject:
   - component: {fileID: 231847311}
   - component: {fileID: 231847310}
   m_Layer: 5
-  m_Name: Placeholder
+  m_Name: Login Field Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1175,6 +1175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 305266121}
   logIn: {fileID: 386318500}
+  signUp: {fileID: 0}
 --- !u!1 &336816907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,7 +1187,7 @@ GameObject:
   - component: {fileID: 336816910}
   - component: {fileID: 336816909}
   m_Layer: 5
-  m_Name: Placeholder
+  m_Name: Name Field Input Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1262,7 +1263,7 @@ GameObject:
   - component: {fileID: 342082822}
   - component: {fileID: 342082825}
   m_Layer: 5
-  m_Name: Name Field
+  m_Name: Name Field Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1556,9 +1557,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 386318500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7de2187d03f87d6469066cc09feb9047, type: 3}
+  m_Script: {fileID: 11500000, guid: 81f91580f4fe6b0439b313f141332969, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  welcomeText: {fileID: 374572828}
+  passwordForgottenest: {fileID: 107093224}
+  login: {fileID: 556206923}
+  signUp: {fileID: 1900725528}
+  passwordField: {fileID: 430182922}
+  loginField: {fileID: 231847310}
 --- !u!1 &430182920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,7 +1577,7 @@ GameObject:
   - component: {fileID: 430182923}
   - component: {fileID: 430182922}
   m_Layer: 5
-  m_Name: Placeholder
+  m_Name: Password Field Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1903,7 +1910,7 @@ GameObject:
   - component: {fileID: 553411310}
   - component: {fileID: 553411309}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Login Field Input Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1977,7 +1984,7 @@ GameObject:
   - component: {fileID: 556206924}
   - component: {fileID: 556206923}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Login Button Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2033,7 +2040,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0412\u043E\u0439\u0442\u0438"
+  m_Text: 
 --- !u!222 &556206924
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2223,7 +2230,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 667
+  orthographic size: 960
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2565,7 +2572,7 @@ GameObject:
   - component: {fileID: 911660244}
   - component: {fileID: 911660243}
   m_Layer: 5
-  m_Name: Placeholder
+  m_Name: Password Field Input Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3101,7 +3108,7 @@ GameObject:
   - component: {fileID: 1133791212}
   - component: {fileID: 1133791211}
   m_Layer: 5
-  m_Name: Placeholder
+  m_Name: Confirm Password Field Input Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3406,7 +3413,7 @@ GameObject:
   - component: {fileID: 1304862067}
   - component: {fileID: 1304862066}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Name Field Input Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3565,7 +3572,7 @@ GameObject:
   - component: {fileID: 1458320774}
   - component: {fileID: 1458320777}
   m_Layer: 5
-  m_Name: Login Field
+  m_Name: Login Field Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3713,7 +3720,7 @@ GameObject:
   - component: {fileID: 1469871871}
   - component: {fileID: 1469871874}
   m_Layer: 5
-  m_Name: Password Field
+  m_Name: Password Field Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3859,7 +3866,7 @@ GameObject:
   - component: {fileID: 1495815836}
   - component: {fileID: 1495815835}
   m_Layer: 5
-  m_Name: Placeholder
+  m_Name: Login Field Input Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3933,7 +3940,7 @@ GameObject:
   - component: {fileID: 1536389644}
   - component: {fileID: 1536389643}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Confirm Password Field Input Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4151,7 +4158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1564185209
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4532,7 +4539,7 @@ GameObject:
   - component: {fileID: 1900725529}
   - component: {fileID: 1900725528}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Sing Up Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4792,7 +4799,7 @@ GameObject:
   - component: {fileID: 1981145891}
   - component: {fileID: 1981145890}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Password Field Input Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4865,6 +4872,7 @@ GameObject:
   - component: {fileID: 1984223086}
   - component: {fileID: 1984223088}
   - component: {fileID: 1984223087}
+  - component: {fileID: 1984223089}
   m_Layer: 5
   m_Name: Sign Up
   m_TagString: Untagged
@@ -4935,3 +4943,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1984223085}
+--- !u!114 &1984223089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1984223085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4503ace88530db40be1db66b330baac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loginFieldInput: {fileID: 911660243}
+  nameFieldInput: {fileID: 336816909}
+  passwordFieldInput: {fileID: 911660243}
+  photoUpload: {fileID: 144066170}
+  registrationButton: {fileID: 156379557}
+  confirmPasswordFieldInput: {fileID: 1133791211}
+  selectSexText: {fileID: 1564185210}
