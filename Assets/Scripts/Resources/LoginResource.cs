@@ -20,10 +20,6 @@ public class LoginResource : MonoBehaviour {
 
 	public void LoadLocalization() {
 		config = LocalizationManager.getConfig (xpath);
-        foreach (KeyValuePair<string, string> kvp in config)
-        {
-            Debug.Log(kvp.Value.ToString());
-        }
         welcomeText.text = config["welcome"];
 		passwordForgottenest.text = config ["password-forgotten"];
 		signUp.text = config ["signup"];

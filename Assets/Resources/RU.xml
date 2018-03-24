@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <main>
   <element>
-        <login>
-	          <login>Войти</login>
-	          <password>Ваш пароль</password>
-	          <password-forgotten>Забыли пароль?</password-forgotten>
-	          <signup>Регистрация</signup>
-	          <welcome>Добро пожаловать в WaveClub!</welcome>
-	          <login-field>Ваш логин</login-field>
-	          <password-field>Ваш пароль</password-field>
-        </login>
-    </element>
-    <element>
-        <sign-up>
-	        <login-field-input>Ваш Логин</login-field-input>
-	        <name-field-input>Ваше Имя</name-field-input>
-	        <password-field-input>Создайте пароль</password-field-input>
-	        <photo-upload>Загрузите вашу фотографию</photo-upload>
-	        <registration-button>Подтвердить</registration-button>
-	        <confirm-password-field-input>Повторите новыый пароль</confirm-password-field-input>
-	        <select-sex-text>Укажите ваш пол</select-sex-text>
-        </sign-up>
-    </element>
+    <login>
+	    <login>Войти</login>
+	    <password>Ваш пароль</password>
+	    <password-forgotten>Забыли пароль?</password-forgotten>
+	    <signup>Регистрация</signup>
+	    <welcome>Добро пожаловать в WaveClub!</welcome>
+	    <login-field>Ваш логин</login-field>
+	    <password-field>Ваш пароль</password-field>
+    </login>
+  </element>
+  <element>
+    <sign-up>
+	    <login-field-input>Ваш Логин</login-field-input>
+	    <name-field-input>Ваше Имя</name-field-input>
+	    <password-field-input>Создайте пароль</password-field-input>
+	    <photo-upload>Загрузите вашу фотографию</photo-upload>
+	    <registration-button>Подтвердить</registration-button>
+	    <confirm-password-field-input>Повторите новыый пароль</confirm-password-field-input>
+	    <select-sex-text>Укажите ваш пол</select-sex-text>
+    </sign-up>
+  </element>
 </main>

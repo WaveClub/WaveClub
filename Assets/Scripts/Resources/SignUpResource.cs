@@ -23,7 +23,6 @@ public class SignUpResource : MonoBehaviour {
 
 	public void LoadLocalization() {
 		config = LocalizationManager.getConfig (xpath);
-        Debug.Log(config);
         loginFieldInput.text = config["login-field-input"];
         nameFieldInput.text = config["name-field-input"];
         photoUpload.text = config["photo-upload"];

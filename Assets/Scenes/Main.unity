@@ -2040,7 +2040,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "\u0412\u043E\u0439\u0442\u0438"
 --- !u!222 &556206924
 CanvasRenderer:
   m_ObjectHideFlags: 0
