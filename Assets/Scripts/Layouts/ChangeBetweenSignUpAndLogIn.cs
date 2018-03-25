@@ -11,8 +11,8 @@ public class ChangeBetweenSignUpAndLogIn : MonoBehaviour, IPointerUpHandler, IPo
 		var active = signUp.activeSelf;
 		signUp.SetActive (!active);
 		logIn.SetActive (active);
-		Vector3 newSignUpCoordinates = new Vector3 (0, 0, 0);
-		signUp.transform.position = newSignUpCoordinates;
+		//Vector3 newSignUpCoordinates = new Vector3 (-Screen.width, 0, 0);
+		signUp.transform.Translate(Vector3.left * 1000 * Time.deltaTime); //+= newSignUpCoordinates;
 	}
 
 	public void OnPointerDown(PointerEventData eventData) {}
