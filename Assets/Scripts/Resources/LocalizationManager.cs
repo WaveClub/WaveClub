@@ -29,6 +29,7 @@ public class LocalizationManager : MonoBehaviour {
 		Dictionary<string, string> result = new Dictionary<string, string> ();
 
 		var file = LocalizationManager.Instance.LoadResource ();
+		Debug.Log (file.ToString ());
 		doc.LoadXml (file.text);
 
 		foreach (XmlNode node in doc.SelectNodes(xpath)) {

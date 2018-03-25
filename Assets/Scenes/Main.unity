@@ -1175,7 +1175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 305266121}
   logIn: {fileID: 386318500}
-  signUp: {fileID: 0}
+  signUp: {fileID: 1984223085}
 --- !u!1 &336816907
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,7 +2230,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 960
+  orthographic size: 667
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
