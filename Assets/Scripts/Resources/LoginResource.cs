@@ -11,7 +11,7 @@ public class LoginResource : MonoBehaviour {
 	public Text signUp;
     public Text passwordField;
     public Text loginField;
-    private const string xpath = "login";
+    private const string xpath = "login_section";
 	private Dictionary<string, string> config;
 
 	// Use this for initialization
@@ -21,13 +21,11 @@ public class LoginResource : MonoBehaviour {
 
 	public void LoadLocalization() {
 		config = LocalizationManager.getConfig (xpath);
-
-		Debug.Log (config.Where(x => x.Key.ToString().CompareTo("welcome") == 0).FirstOrDefault().Value);
         welcomeText.text = config["welcome"];
-		passwordForgottenest.text = config ["password-forgotten"];
+		passwordForgottenest.text = config ["password_forgotten"];
 		signUp.text = config ["signup"];
-		login.text = config ["login-1"];
-        loginField.text = config["login-field"];
-        passwordField.text = config["password-field"];
+		login.text = config ["login"];
+        loginField.text = config["login_field"];
+        passwordField.text = config["password_field"];
     }
 }

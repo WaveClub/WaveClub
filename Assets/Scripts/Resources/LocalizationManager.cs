@@ -28,15 +28,18 @@ public class LocalizationManager : MonoBehaviour {
 		XmlDocument doc = new XmlDocument ();
 		Dictionary<string, string> result = new Dictionary<string, string> ();
 
-		var file = LocalizationManager.Instance.LoadResource ();
+		var file = LocalizationManager.Instance.LoadResource();
 		Debug.Log (file.ToString ());
 		doc.LoadXml (file.text);
 
-		foreach (XmlNode node in doc.SelectNodes(xpath)) {
-			foreach (XmlNode child in node.ChildNodes) {
-				result.Add (child.Name, child.InnerText);
-			}
-		}
+        XmlElement root = doc.DocumentElement;
+        foreach (XmlNode node in root.SelectNodes(xpath)) {
+            foreach (XmlNode child in node.ChildNodes) {
+                result.Add(child.Name, child.InnerText);
+                Debug.Log(child.Name);
+                Debug.Log(child.InnerText);
+            }
+        }
 		return result;
 	}
 }

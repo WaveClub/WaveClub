@@ -13,7 +13,7 @@ public class SignUpResource : MonoBehaviour {
     public Text confirmPasswordFieldInput;
     public Text selectSexText;
 
-    private const string xpath = "sign-up";
+    private const string xpath = "sign_up_section";
 	private Dictionary<string, string> config;
 
 	// Use this for initialization
@@ -23,12 +23,12 @@ public class SignUpResource : MonoBehaviour {
 
 	public void LoadLocalization() {
 		config = LocalizationManager.getConfig (xpath);
-        loginFieldInput.text = config["login-field-input"];
-        nameFieldInput.text = config["name-field-input"];
-        photoUpload.text = config["photo-upload"];
-        registrationButton.text = config["registration-button.text"];
-        passwordFieldInput.text = config["password-field-input"];
-        confirmPasswordFieldInput.text = config["confirm-password-field-input"];
-        selectSexText.text = config["select-sex-text"];
+        loginFieldInput.text = config["login_field_input"];
+        nameFieldInput.text = config["name_field_input"];
+        photoUpload.text = config["photo_upload"];
+        registrationButton.text = config["registration_button"];
+        passwordFieldInput.text = config["password_field_input"];
+        confirmPasswordFieldInput.text = config["confirm_password_field_input"];
+        selectSexText.text = config["select_sex_text"];
     }
 }
