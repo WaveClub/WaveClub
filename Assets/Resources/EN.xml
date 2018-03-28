@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<main>
+  <login_section>
+      <login>Sign in</login>
+      <password>Password</password>
+      <password_forgotten>Forgotten password?</password_forgotten>
+      <sign_up>Sign Up</sign_up>
+      <welcome>Welcome to WaveClub!</welcome>
+      <login_field>Username</login_field>
+      <password_field>Password</password_field>
+  </login_section>
+  <sign_up_section>
+      <login_field_input>Username</login_field_input>
+      <name_field_input>Name</name_field_input>
+      <password_field_input>Password</password_field_input>
+      <photo_upload>Upload Photo</photo_upload>
+      <registration_button>Confirm</registration_button>
+      <confirm_password_field_input>Re-enter the new password</confirm_password_field_input>
+      <select_sex_text>Select Sex</select_sex_text>
+  </sign_up_section>
+</main>

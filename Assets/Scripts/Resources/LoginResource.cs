@@ -23,7 +23,7 @@ public class LoginResource : MonoBehaviour {
 		config = LocalizationManager.getConfig (xpath);
         welcomeText.text = config["welcome"];
 		passwordForgottenest.text = config ["password_forgotten"];
-		signUp.text = config ["signup"];
+		signUp.text = config ["sign_up"];
 		login.text = config ["login"];
         loginField.text = config["login_field"];
         passwordField.text = config["password_field"];
