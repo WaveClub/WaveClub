@@ -4,31 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SignUpResource : MonoBehaviour {
+	public Text confirm;
+	public Text confirmPassword;
+	public Text createPassword;
+	public Text selectYourSex;
+	public Text yourLogin;
+	public Text yourName;
+	public Text uploadPhoto;
 
-    public Text loginFieldInput;
-    public Text nameFieldInput;
-    public Text passwordFieldInput;
-    public Text photoUpload;
-    public Text registrationButton;
-    public Text confirmPasswordFieldInput;
-    public Text selectSexText;
+    private const string xpath = "sign_up_section";
 
-    private const string xpath = "sign-up";
-	private Dictionary<string, string> config;
-
-	// Use this for initialization
 	void Start () {
 		LoadLocalization ();
 	}
 
 	public void LoadLocalization() {
-		config = LocalizationManager.getConfig (xpath);
-        loginFieldInput.text = config["login-field-input"];
-        nameFieldInput.text = config["name-field-input"];
-        photoUpload.text = config["photo-upload"];
-        registrationButton.text = config["registration-button.text"];
-        passwordFieldInput.text = config["password-field-input"];
-        confirmPasswordFieldInput.text = config["confirm-password-field-input"];
-        selectSexText.text = config["select-sex-text"];
+		Dictionary<string, string> config = LocalizationManager.getConfig (xpath);
+
+		confirm.text = config ["confirm"];
+		confirmPassword.text = config ["confirm_password"];
+		createPassword.text = config ["create_password"];
+		selectYourSex.text = config ["select_your_sex"];
+		yourLogin.text = config ["your_login"];
+		yourName.text = config ["your_name"];
+		uploadPhoto.text = config ["upload_photo"];
     }
 }

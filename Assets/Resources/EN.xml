@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<main>
+  <login_section>
+      <forgotten_password>Forgotten password?</forgotten_password>
+      <sign_in>Sign in</sign_in>
+      <sign_up>Sign Up</sign_up>
+      <your_login>Your login</your_login>
+      <your_password>Your password</your_password>
+      <welcome_to_waveclub>Welcome to WaveClub!</welcome_to_waveclub>
+  </login_section>
+  <sign_up_section>
+      <confirm>Confirm</confirm>
+      <confirm_password>Confirm password</confirm_password>
+      <create_password>Create password</create_password>
+      <select_your_sex>Select your sex</select_your_sex>
+      <your_login>Your login</your_login>
+      <your_name>Name</your_name>
+      <upload_photo>Upload photo</upload_photo>
+  </sign_up_section>
+</main>

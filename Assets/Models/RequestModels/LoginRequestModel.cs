@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LoginRequestModel {
-
 	public string phoneNumber;
 	public string password;
 

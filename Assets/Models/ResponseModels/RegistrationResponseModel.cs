@@ -3,6 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class BaseResponse {
-	public int status_code;
+public class RegistrationResponseModel : BaseResponse {
+	public int user_id;
 }

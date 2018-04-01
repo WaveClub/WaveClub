@@ -10,42 +10,35 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 	public InputField passwordField;
 	public InputField confirmPasswordField;
 	public GameObject male;
+
 	public Sprite incorrectFieldSprite;
 
-	public GameObject message;
-	public Text messageText;
+	public GameObject UIMessage;
+	public Text UIMessageText;
 
 	private string body;
 	private string response;
 	private const string method = "/registration";
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
 	void Update () {
 		if (response != null) {
-			var responseData = JsonUtility.FromJson<BaseResponse> (response);
+			var responseData = JsonUtility.FromJson<RegistrationResponseModel> (response);
 
-			message.SetActive (true);
 			switch (responseData.status_code) {
-
-			case (int) StatusCode.USER_EXISTS:
-				messageText.text = "Пользователь с таким логином уже существует";
-				break;
-
-			case (int) StatusCode.OK:
-				messageText.text = "Регистрация успешна";
-				break;
-
+				case (int) StatusCode.USER_EXISTS:
+					ShowMessage ("User with this phone number already exists!");
+					break;
+				case (int) StatusCode.OK:
+					// todo object on scene
+					SendAcceptCode (responseData);
+					break;
 			}
 
 			response = null;
 		}
 	}
 
-	public bool checkField() {
+	public bool CheckField() {
 		if (passwordField.text == "")
 			passwordField.image.sprite = incorrectFieldSprite;
 		if (confirmPasswordField.text == "")
@@ -68,10 +61,23 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 		return false;
 	}
 
+	public void SendAcceptCode(RegistrationResponseModel model) {
+		
+		string body = JsonUtility.ToJson (new {
+			user_id = model.user_id,
+			code = 111111
+		});
+	}
+
+	public void ShowMessage(string message) {
+		UIMessage.SetActive (true);
+		UIMessageText.text = message;
+	}
+
 	public void OnPointerUp(PointerEventData eventData) {
 		string sex = male.activeSelf ? "male" : "female";
 
-		if (checkField ())
+		if (CheckField ())
 			return;
 
 		RegistrationRequestModel credentials = new RegistrationRequestModel(loginField.text, nameField.text, passwordField.text, sex);

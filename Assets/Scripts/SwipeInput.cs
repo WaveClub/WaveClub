@@ -78,9 +78,12 @@ public class SwipeInput : MonoBehaviour
 			if (deltaX > 0) {
 				direction = SwipeDirection.Right;
 				messageText.text = "right";
-				var active = signUp.activeSelf;
-				signUp.SetActive (!active);
-				logIn.SetActive (active);
+				if (signUp.transform.position.x < Screen.width) {
+					signUp.transform.position += new Vector3 (deltaX, 0, 0);
+				}
+				//var active = signUp.activeSelf;
+				//signUp.SetActive (!active);
+				//logIn.SetActive (active);
 
 			}
 			//left

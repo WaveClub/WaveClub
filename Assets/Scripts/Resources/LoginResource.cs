@@ -5,29 +5,27 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class LoginResource : MonoBehaviour {
-	public Text welcomeText;
-	public Text passwordForgottenest;
-	public Text login;
+	public Text forgottenPassword;
+	public Text signIn;
 	public Text signUp;
-    public Text passwordField;
-    public Text loginField;
-    private const string xpath = "login";
-	private Dictionary<string, string> config;
+	public Text yourLogin;
+	public Text yourPassword;
+	public Text welcomeToWaveclub;
 
-	// Use this for initialization
+	private const string xpath = "login_section";
+
 	void Start () {
 		LoadLocalization ();
 	}
 
 	public void LoadLocalization() {
-		config = LocalizationManager.getConfig (xpath);
+		Dictionary<string, string> config = LocalizationManager.getConfig (xpath);
 
-		Debug.Log (config.Where(x => x.Key.ToString().CompareTo("welcome") == 0).FirstOrDefault().Value);
-        welcomeText.text = config["welcome"];
-		passwordForgottenest.text = config ["password-forgotten"];
-		signUp.text = config ["signup"];
-		login.text = config ["login-1"];
-        loginField.text = config["login-field"];
-        passwordField.text = config["password-field"];
+		forgottenPassword.text = config["forgotten_password"];
+		signIn.text = config ["sign_in"];
+		signUp.text = config ["sign_up"];
+		yourLogin.text = config ["your_login"];
+		yourPassword.text = config ["your_password"];
+		welcomeToWaveclub.text = config ["welcome_to_waveclub"];
     }
 }

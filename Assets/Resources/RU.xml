@@ -1,19 +1,20 @@
-<login>
-    <login-1>Войти</login-1>
-    <password>Ваш пароль</password>
-    <password-forgotten>Забыли пароль?</password-forgotten>
-    <signup>Регистрация</signup>
-    <welcome>Добро пожаловать в WaveClub!</welcome>
-    <login-field>Ваш логин</login-field>
-    <password-field>Ваш пароль</password-field>
-</login>
-<!--<sign-up>
-    <login-field-input>Ваш Логин</login-field-input>
-    <name-field-input>Ваше Имя</name-field-input>
-    <password-field-input>Создайте пароль</password-field-input>
-    <photo-upload>Загрузите вашу фотографию</photo-upload>
-    <registration-button>Подтвердить</registration-button>
-    <confirm-password-field-input>Повторите новыый пароль</confirm-password-field-input>
-    <select-sex-text>Укажите ваш пол</select-sex-text>
-</sign-up>-->
-
+<?xml version="1.0" encoding="utf-8" ?>
+<main>
+  <login_section>
+      <forgotten_password>Забыли пароль?</forgotten_password>
+      <sign_in>Войти</sign_in>
+      <sign_up>Регистрация</sign_up>
+      <your_login>Ваш логин</your_login>
+      <your_password>Ваш пароль</your_password>
+      <welcome_to_waveclub>Добро пожаловать в WaveClub!</welcome_to_waveclub>
+  </login_section>
+  <sign_up_section>
+      <confirm>Подтвердить</confirm>
+      <confirm_password>Повторите новый пароль</confirm_password>
+      <create_password>Создайте пароль</create_password>
+      <select_your_sex>Укажите ваш пол</select_your_sex>
+      <your_login>Ваш Логин</your_login>
+      <your_name>Ваше Имя</your_name>
+      <upload_photo>Загрузите вашу фотографию</upload_photo>
+  </sign_up_section>
+</main>
