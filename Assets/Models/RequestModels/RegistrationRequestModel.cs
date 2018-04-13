@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RegistrationRequestModel {
-	public string phoneNumber { get; set; }
-	public string password { get; set; }
-	public string name { get; set; }
-	public string sex { get; set; }
-	public string lang { get; set; }
+    public string phoneNumber;
+    public string password;
+    public string name;
+    public string sex;
+    public string lang;
 
 	public RegistrationRequestModel(
 		string phone,

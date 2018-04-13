@@ -10,8 +10,9 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 	public InputField passwordField;
 	public InputField confirmPasswordField;
 	public GameObject male;
+    public GameObject codeConfirm;
 
-	public Sprite incorrectFieldSprite;
+    public Sprite incorrectFieldSprite;
 
 	public GameObject UIMessage;
 	public Text UIMessageText;
@@ -26,7 +27,8 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 
 			switch (responseData.status_code) {
 				case (int) StatusCode.USER_EXISTS:
-					ShowMessage ("User with this phone number already exists!");
+                    SendAcceptCode(responseData);
+                    //ShowMessage ("User with this phone number already exists!");
 					break;
 				case (int) StatusCode.OK:
 					// todo object on scene
@@ -62,12 +64,8 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 	}
 
 	public void SendAcceptCode(RegistrationResponseModel model) {
-		
-		string body = JsonUtility.ToJson (new {
-			user_id = model.user_id,
-			code = 111111
-		});
-	}
+        codeConfirm.SetActive(true);
+    }
 
 	public void ShowMessage(string message) {
 		UIMessage.SetActive (true);
@@ -81,8 +79,9 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 			return;
 
 		RegistrationRequestModel credentials = new RegistrationRequestModel(loginField.text, nameField.text, passwordField.text, sex);
-		body = credentials.SaveToString();
 
+        body = credentials.SaveToString();
+        
 		StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
 	}
 
