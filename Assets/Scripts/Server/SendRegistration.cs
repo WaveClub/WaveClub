@@ -27,8 +27,7 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 
 			switch (responseData.status_code) {
 				case (int) StatusCode.USER_EXISTS:
-                    SendAcceptCode(responseData);
-                    //ShowMessage ("User with this phone number already exists!");
+                    ShowMessage ("User with this phone number already exists!");
 					break;
 				case (int) StatusCode.OK:
 					// todo object on scene
