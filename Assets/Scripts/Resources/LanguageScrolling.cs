@@ -39,7 +39,9 @@ public class LanguageScrolling : MonoBehaviour {
 	}
 
 	private void FixedUpdate () {
-		if (!isScrolling && (contentRect.anchoredPosition.x >= instLanguagesPos [0].x || contentRect.anchoredPosition.x <= instLanguagesPos [languages.Count - 1].x)) {
+		if (!isScrolling && (contentRect.anchoredPosition.x >= instLanguagesPos [0].x || 
+				contentRect.anchoredPosition.x <= instLanguagesPos [languages.Count - 1].x)
+		) {
 			languageScroll.inertia = false;
 		}
 		float nearestPos = float.MaxValue;
