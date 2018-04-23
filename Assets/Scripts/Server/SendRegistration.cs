@@ -21,7 +21,7 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 	private string response;
 	private const string method = "/registration";
 
-	void Update () {
+    void Update () {
 		if (response != null) {
 			var responseData = JsonUtility.FromJson<RegistrationResponseModel> (response);
 
@@ -34,7 +34,6 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 					SendAcceptCode (responseData);
 					break;
 			}
-
 			response = null;
 		}
 	}
@@ -63,6 +62,7 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 	}
 
 	public void SendAcceptCode(RegistrationResponseModel model) {
+        SendSMSCode.registrationResponseModel = model;
         codeConfirm.SetActive(true);
     }
 
@@ -80,9 +80,8 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 		RegistrationRequestModel credentials = new RegistrationRequestModel(loginField.text, nameField.text, passwordField.text, sex);
 
         body = credentials.SaveToString();
-        
+
 		StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
 	}
-
 	public void OnPointerDown(PointerEventData eventData) {}
 }

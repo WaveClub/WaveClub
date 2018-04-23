@@ -5,12 +5,12 @@ using System.Text;
 using UnityEngine;
 
 public class CodeConfirmRequestModel {
-    public string userId { get; set; }
-    public string сode { get; set; }
+    public int user_id;
+    public string code;
 
-    public CodeConfirmRequestModel(string userId, string code) {
-        this.userId = userId;
-        this.сode = code;
+    public CodeConfirmRequestModel(int user_id, string code) {
+        this.user_id = user_id;
+        this.code = code;
     }
 
     public string SaveToString()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RegistrationRequestModel {
-    public string phoneNumber;
+    public string phone;
     public string password;
     public string name;
     public string sex;
@@ -15,7 +15,7 @@ public class RegistrationRequestModel {
 		string pass,
 		string sex
 	) {
-		this.phoneNumber = phone;
+		this.phone = phone;
 		this.password = pass;
 		this.name = name;
 		this.sex = sex;

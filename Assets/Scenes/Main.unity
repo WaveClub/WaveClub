@@ -1407,7 +1407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &305266122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1878,14 +1878,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b264f94efb43bc74cb6a51ec966e0f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swiping: 0
-  minSwipeDistance: 203
-  errorRange: 0
-  message: {fileID: 534407561}
-  messageText: {fileID: 90624392}
-  direction: 4
-  signUp: {fileID: 1984223085}
-  logIn: {fileID: 386318500}
 --- !u!1 &430182920
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,7 +2581,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &572073144
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3236,7 +3228,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 338
+  orthographic size: 346
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3873,6 +3865,7 @@ GameObject:
   - component: {fileID: 948296365}
   - component: {fileID: 948296364}
   - component: {fileID: 948296366}
+  - component: {fileID: 948296367}
   m_Layer: 5
   m_Name: Code Confirm Button
   m_TagString: Untagged
@@ -3995,6 +3988,22 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+--- !u!114 &948296367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948296362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5434cb2f3151a2c41a064584241be363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  codeConfirm: {fileID: 1039936083}
+  incorrectFieldSprite: {fileID: 21300000, guid: 6d3b6f99d0283cd44b6f848b99423de2,
+    type: 3}
+  UIMessage: {fileID: 534407561}
+  UIMessageText: {fileID: 90624392}
 --- !u!1 &954362368
 GameObject:
   m_ObjectHideFlags: 0
@@ -4247,7 +4256,7 @@ MonoBehaviour:
   m_LineType: 0
   m_HideMobileInput: 0
   m_CharacterValidation: 1
-  m_CharacterLimit: 4
+  m_CharacterLimit: 6
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -6493,7 +6502,6 @@ MonoBehaviour:
   confirmPasswordField: {fileID: 1275779425}
   male: {fileID: 67262987}
   codeConfirm: {fileID: 572073143}
-  codeConfirmText: {fileID: 0}
   incorrectFieldSprite: {fileID: 21300000, guid: 6d3b6f99d0283cd44b6f848b99423de2,
     type: 3}
   UIMessage: {fileID: 534407561}
