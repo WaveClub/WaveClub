@@ -24,7 +24,6 @@ public class SendLoginRequest : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 	void Update () {
 		if (response != null) {
 			var responseData = JsonUtility.FromJson<LoginResponseModel> (response);
-
 			message.SetActive (true);
 			switch (responseData.status_code) {
 
@@ -33,6 +32,8 @@ public class SendLoginRequest : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 				break;
 
 			case (int) StatusCode.OK:
+				Debug.Log (responseData.access_token);
+				PlayerPrefs.SetString ("access_token", responseData.access_token);
 				messageText.text = "Привет, " + responseData.account.name;
 				break;
 
@@ -56,7 +57,8 @@ public class SendLoginRequest : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 	public void OnPointerUp(PointerEventData eventData) {
 		if (checkField ())
 			return;
-		
+
+
 		LoginRequestModel credentials = new LoginRequestModel (phoneField.text, passwordField.text);
 		body = credentials.SaveToString();
 

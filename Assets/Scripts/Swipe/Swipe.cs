@@ -29,7 +29,7 @@ public class Swipe : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHan
 		OnSwipeEnd.Invoke(eventData.position);
 //		Debug.Log ("current " + eventData.position.x);
 //		Debug.Log ("help " + _lastPosition.x);
-		Debug.Log ("delta " + (eventData.position.x - startDragPosition.x));
+		//Debug.Log ("delta " + (eventData.position.x - startDragPosition.x));
 
 
 		if (eventData.position.x - startDragPosition.x > Screen.width / 2) {
@@ -46,7 +46,7 @@ public class Swipe : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHan
 	}
 
 	public void OnDrag(PointerEventData eventData) {
-
+		Debug.Log ("Start drag");
 		direction = eventData.position - _lastPosition;
 
 		//Debug.Log (direction.x);
@@ -68,17 +68,17 @@ public class Swipe : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHan
 
 	private IEnumerator UpdatePathToRightSide()
 	{
-		Debug.Log ("before while" + (signUp.transform.position.x - Screen.width / 2));
+		//Debug.Log ("before while" + (signUp.transform.position.x - Screen.width / 2));
 
 		while (signUp.transform.position.x  < Screen.width + Screen.width / 2) {
 			if (signUp.transform.position.x + speed < Screen.width + Screen.width / 2) {
 				signUp.transform.position += new Vector3 (speed, 0, 0);
 			} else {
-				Debug.Log ("else" + signUp.transform.position.x);
+				//Debug.Log ("else" + signUp.transform.position.x);
 				signUp.transform.position += new Vector3 (Screen.width + Screen.width / 2 - signUp.transform.position.x, 0, 0);
 
 			}
-			Debug.Log (signUp.transform.position.x);
+			//Debug.Log (signUp.transform.position.x);
 			
 			yield return null;
 		}
@@ -86,17 +86,17 @@ public class Swipe : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHan
 
 	private IEnumerator UpdatePathToLeftSide()
 	{
-		Debug.Log ("before while" + (signUp.transform.position.x - Screen.width / 2));
+		//Debug.Log ("before while" + (signUp.transform.position.x - Screen.width / 2));
 
 		while (signUp.transform.position.x  > Screen.width / 2) {
 			if (signUp.transform.position.x - speed >Screen.width / 2) {
 				signUp.transform.position -= new Vector3 (speed, 0, 0);
 			} else {
-				Debug.Log ("else" + signUp.transform.position.x);
+				//Debug.Log ("else" + signUp.transform.position.x);
 				signUp.transform.position -= new Vector3 (signUp.transform.position.x - Screen.width / 2, 0, 0);
 
 			}
-			Debug.Log (signUp.transform.position.x);
+			//Debug.Log (signUp.transform.position.x);
 
 			yield return null;
 		}

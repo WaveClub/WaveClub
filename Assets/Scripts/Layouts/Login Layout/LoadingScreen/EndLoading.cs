@@ -6,8 +6,11 @@ public class EndLoading : MonoBehaviour {
 	public GameObject loadingScreen;
 	public GameObject logIn;
 	public GameObject signUp;
+	public GameObject uiMenu;
 
 	private const int finishTime = 3;
+
+	private const string accessTokenKey = "access_token";
 
 	void Start () {
 		signUp.transform.position += new Vector3 (Screen.width, 0, 0);
@@ -17,7 +20,12 @@ public class EndLoading : MonoBehaviour {
 	void Update () {
 		if (Time.time > finishTime) {
 			loadingScreen.SetActive (false);
-			logIn.SetActive (true);
+
+			if (PlayerPrefs.GetString (accessTokenKey) != null) {
+				uiMenu.SetActive (true);
+			} else {
+				logIn.SetActive (true);
+			}
 		}
 	}
 }
