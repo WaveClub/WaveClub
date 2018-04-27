@@ -20,8 +20,7 @@ public class EndLoading : MonoBehaviour {
 	void Update () {
 		if (Time.time > finishTime) {
 			loadingScreen.SetActive (false);
-
-			if (PlayerPrefs.GetString (accessTokenKey) != null) {
+			if (!System.String.IsNullOrEmpty(PlayerPrefs.GetString (accessTokenKey))) {
 				uiMenu.SetActive (true);
 			} else {
 				logIn.SetActive (true);
