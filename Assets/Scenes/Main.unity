@@ -7047,6 +7047,7 @@ GameObject:
   - component: {fileID: 1984223088}
   - component: {fileID: 1984223087}
   - component: {fileID: 1984223089}
+  - component: {fileID: 1984223090}
   m_Layer: 5
   m_Name: Sign Up
   m_TagString: Untagged
@@ -7135,6 +7136,33 @@ MonoBehaviour:
   yourLogin: {fileID: 1495815835}
   yourName: {fileID: 336816909}
   uploadPhoto: {fileID: 144066170}
+--- !u!114 &1984223090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1984223085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0aa290a0569c23449f57de9b129692b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signUp: {fileID: 1984223085}
+  OnSwipeStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSwipeEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSwipe:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &2058982842
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ public class CameraManager {
 	private CameraManager() {
 		WebCamDevice? device = WebCamTexture.devices.FirstOrDefault (d => d.isFrontFacing);
 		if (device.HasValue) {
-			Camera = new WebCamTexture (device.Value.name);
+			Camera = new WebCamTexture (device.Value.name, Screen.height, Screen.width);
 			Camera.filterMode = FilterMode.Point;
 		}
 	}
