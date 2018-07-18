@@ -1,6 +1,8 @@
 ﻿using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using System;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -21,10 +23,20 @@ public class CloseCamera : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
 		#endif
 	}
 
-	public void OnPointerUp(PointerEventData eventData) {
+    public void UpLoadPhotoFromPlayerPrefs(String str)
+    {
+        Texture2D tex = new Texture2D(1, 1);
+        tex.LoadImage(Convert.FromBase64String(PlayerPrefs.GetString("PhotoSaved")));
+        tex.Apply();
+        this.photoImage.texture = tex;
+    }
+
+    public void OnPointerUp(PointerEventData eventData) {
 		CameraManager.Instance.GetPhoto (photoImage);
-		CameraManager.Instance.StopCamera ();
-	}
+        StaticObject.PhotoFromCamera = photoImage;
+        PlayerPrefs.SetString("PhotoSaved", StaticObject.RawImageToBase64String(photoImage));
+        CameraManager.Instance.StopCamera ();
+    }
 
 	public void OnPointerDown(PointerEventData eventData) {}
 }

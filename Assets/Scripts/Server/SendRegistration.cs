@@ -58,6 +58,11 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 			return true;
 		}
 
+        if (StaticObject.PhotoFromCamera == null) {
+            //TODO return window with text = "Please make photo!";
+            return true;
+        }
+
 		return false;
 	}
 
@@ -77,7 +82,7 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 		if (CheckField ())
 			return;
 
-		RegistrationRequestModel credentials = new RegistrationRequestModel(loginField.text, nameField.text, passwordField.text, sex);
+		RegistrationRequestModel credentials = new RegistrationRequestModel(loginField.text, nameField.text, passwordField.text, sex, StaticObject.RawImageToBase64String(StaticObject.PhotoFromCamera));
 
         body = credentials.SaveToString();
 

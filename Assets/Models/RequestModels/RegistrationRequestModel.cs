@@ -8,18 +8,21 @@ public class RegistrationRequestModel {
     public string name;
     public string sex;
     public string lang;
+    public string picture;
 
 	public RegistrationRequestModel(
 		string phone,
 		string name,
 		string pass,
-		string sex
+		string sex,
+        string picture
 	) {
 		this.phone = phone;
 		this.password = pass;
 		this.name = name;
 		this.sex = sex;
 		this.lang = LocalizationManager.Instance.LanguageCode;
+        this.picture = picture;
 	}
 
 	public string SaveToString() {
