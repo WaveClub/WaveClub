@@ -15,10 +15,12 @@ public class AvatarCamera : MonoBehaviour, IPointerUpHandler, IPointerDownHandle
 	}
 
 	public void OnPointerUp(PointerEventData eventData) {
-		if (CameraManager.Instance.GetCameraStatus()) {
-			CameraManager.Instance.StopCamera ();
-		} else {
-			CameraManager.Instance.StartCamera ();
+		if ("false".Equals (PlayerPrefs.GetString ("isDragging"))) {
+			if (CameraManager.Instance.GetCameraStatus()) {
+				CameraManager.Instance.StopCamera ();
+			} else {
+				CameraManager.Instance.StartCamera ();
+			}
 		}
 	}
 

@@ -19,12 +19,15 @@ public class Swipe : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHan
 	Vector2 direction;
 
 	public void OnBeginDrag(PointerEventData eventData) {
+		PlayerPrefs.SetString ("isDragging", "true");
 		_lastPosition = eventData.position;
 		startDragPosition = eventData.position;
 		OnSwipeStart.Invoke(eventData.position);
 	}
 
 	public void OnEndDrag(PointerEventData eventData) {
+		PlayerPrefs.SetString ("isDragging", "false");
+
 		OnSwipeEnd.Invoke(eventData.position);
 
 		if (eventData.position.x - startDragPosition.x > Screen.width / 2) {
@@ -32,7 +35,6 @@ public class Swipe : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHan
 		} else {
 			signUpToTheRight = false;
 		}
-		Debug.Log (signUpToTheRight);
 		if (signUpToTheRight) {
 			StartCoroutine (UpdatePathToRightSide ());
 		} else  {

@@ -1562,6 +1562,7 @@ GameObject:
   - component: {fileID: 342082823}
   - component: {fileID: 342082822}
   - component: {fileID: 342082825}
+  - component: {fileID: 342082826}
   m_Layer: 5
   m_Name: Name Field Input
   m_TagString: Untagged
@@ -1698,6 +1699,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validSprite: {fileID: 21300000, guid: fee1fd7e300c63e4294aa3a323aab0cf, type: 3}
   field: {fileID: 342082822}
+--- !u!114 &342082826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 342082820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0aa290a0569c23449f57de9b129692b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signUp: {fileID: 1984223085}
+  OnSwipeStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSwipeEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSwipe:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &374572826
 GameObject:
   m_ObjectHideFlags: 0
@@ -4786,6 +4814,7 @@ GameObject:
   - component: {fileID: 1275779426}
   - component: {fileID: 1275779425}
   - component: {fileID: 1275779428}
+  - component: {fileID: 1275779429}
   m_Layer: 5
   m_Name: Confirm Password Field
   m_TagString: Untagged
@@ -4922,6 +4951,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validSprite: {fileID: 21300000, guid: fee1fd7e300c63e4294aa3a323aab0cf, type: 3}
   field: {fileID: 1275779425}
+--- !u!114 &1275779429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1275779423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0aa290a0569c23449f57de9b129692b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signUp: {fileID: 1984223085}
+  OnSwipeStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSwipeEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSwipe:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1304862064
 GameObject:
   m_ObjectHideFlags: 0
@@ -5400,6 +5456,7 @@ GameObject:
   - component: {fileID: 1458320775}
   - component: {fileID: 1458320774}
   - component: {fileID: 1458320777}
+  - component: {fileID: 1458320778}
   m_Layer: 5
   m_Name: Login Field Input
   m_TagString: Untagged
@@ -5536,6 +5593,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validSprite: {fileID: 21300000, guid: fee1fd7e300c63e4294aa3a323aab0cf, type: 3}
   field: {fileID: 1458320774}
+--- !u!114 &1458320778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1458320772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0aa290a0569c23449f57de9b129692b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signUp: {fileID: 1984223085}
+  OnSwipeStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSwipeEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSwipe:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1469871869
 GameObject:
   m_ObjectHideFlags: 0
@@ -5548,6 +5632,7 @@ GameObject:
   - component: {fileID: 1469871872}
   - component: {fileID: 1469871871}
   - component: {fileID: 1469871874}
+  - component: {fileID: 1469871875}
   m_Layer: 5
   m_Name: Password Field Input
   m_TagString: Untagged
@@ -5684,6 +5769,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validSprite: {fileID: 21300000, guid: fee1fd7e300c63e4294aa3a323aab0cf, type: 3}
   field: {fileID: 1469871871}
+--- !u!114 &1469871875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1469871869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0aa290a0569c23449f57de9b129692b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signUp: {fileID: 1984223085}
+  OnSwipeStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSwipeEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSwipe:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &1495815833
 GameObject:
   m_ObjectHideFlags: 0

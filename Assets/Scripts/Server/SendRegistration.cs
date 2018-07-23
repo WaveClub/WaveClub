@@ -77,16 +77,19 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 	}
 
 	public void OnPointerUp(PointerEventData eventData) {
-		string sex = male.activeSelf ? "male" : "female";
+		if ("false".Equals (PlayerPrefs.GetString ("isDragging"))) {
+			string sex = male.activeSelf ? "male" : "female";
 
-		if (CheckField ())
-			return;
+			if (CheckField ())
+				return;
 
-		RegistrationRequestModel credentials = new RegistrationRequestModel(loginField.text, nameField.text, passwordField.text, sex, StaticObject.RawImageToBase64String(StaticObject.PhotoFromCamera));
+			RegistrationRequestModel credentials = new RegistrationRequestModel(loginField.text, nameField.text, passwordField.text, sex, StaticObject.RawImageToBase64String(StaticObject.PhotoFromCamera));
 
-        body = credentials.SaveToString();
+			body = credentials.SaveToString();
 
-		StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
+			StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
+		}
+
 	}
 	public void OnPointerDown(PointerEventData eventData) {}
 }
