@@ -4,9 +4,10 @@ using UnityEngine;
 
 [System.Serializable]
 public class AccountModel {
-	
-	public string name;
+	public int id;
+	public bool is_active;
 	public string lang;
+	public string name;
 	public string phone;
 	public string role;
 	public string sex;

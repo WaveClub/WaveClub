@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LocalizationManager : MonoBehaviour {
+public class LocalizationManager {
 	public string LanguageCode { get; set; }
 
 	private static LocalizationManager instance;
@@ -29,15 +29,12 @@ public class LocalizationManager : MonoBehaviour {
 		Dictionary<string, string> result = new Dictionary<string, string> ();
 
 		var file = LocalizationManager.Instance.LoadResource();
-		Debug.Log (file.ToString ());
 		doc.LoadXml (file.text);
 
         XmlElement root = doc.DocumentElement;
         foreach (XmlNode node in root.SelectNodes(xpath)) {
             foreach (XmlNode child in node.ChildNodes) {
                 result.Add(child.Name, child.InnerText);
-                Debug.Log(child.Name);
-                Debug.Log(child.InnerText);
             }
         }
 		return result;
