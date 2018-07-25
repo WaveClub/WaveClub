@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LoginRequestModel {
-	public string phoneNumber;
+	public string phone;
 	public string password;
 
-	public LoginRequestModel(string phone, string pass) {
-		phoneNumber = phone;
+	public LoginRequestModel(string phoneNumber, string pass) {
+		phone = phoneNumber;
 		password = pass;
 	}
 
