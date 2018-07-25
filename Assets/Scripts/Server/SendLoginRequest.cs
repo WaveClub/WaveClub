@@ -21,7 +21,11 @@ public class SendLoginRequest : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 	void Update () {
 		if (response != null) {
 			var responseData = JsonUtility.FromJson<LoginResponseModel> (response);
+<<<<<<< HEAD
 			spinner.SetActive (false);
+=======
+			message.SetActive (true);
+>>>>>>> b56f826ba21ced46a4cc912a776f8ca9bd22339b
 			switch (responseData.status_code) {
 
 			case (int) StatusCode.INVALID_CREDENTIALS:
@@ -33,7 +37,11 @@ public class SendLoginRequest : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 			case (int) StatusCode.OK:
 				Debug.Log (responseData.access_token);
 				PlayerPrefs.SetString ("access_token", responseData.access_token);
+<<<<<<< HEAD
 				mainMenu.SetActive (true);
+=======
+				messageText.text = "Привет, " + responseData.account.name;
+>>>>>>> b56f826ba21ced46a4cc912a776f8ca9bd22339b
 				break;
 
 			}
@@ -57,6 +65,10 @@ public class SendLoginRequest : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 		if (checkField ())
 			return;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> b56f826ba21ced46a4cc912a776f8ca9bd22339b
 		LoginRequestModel credentials = new LoginRequestModel (phoneField.text, passwordField.text);
 		body = credentials.SaveToString();
 		spinner.SetActive (true);
