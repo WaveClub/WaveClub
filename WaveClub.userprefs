@@ -1,16 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Layouts\Signup Layout\Camera\CloseCamera.cs">
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Resources\LanguageScrolling.cs">
->>>>>>> b56f826ba21ced46a4cc912a776f8ca9bd22339b
     <Files>
       <File FileName="Assets\Scripts\Server\SendLoginRequest.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Server\RequestHelper.cs" Line="1" Column="1" />
       <File FileName="Assets\Models\RequestModels\LoginRequestModel.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GoToLogInFromSignUp.cs" Line="1" Column="1" />
-<<<<<<< HEAD
       <File FileName="Assets\Scripts\SwipeInput.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CloseObject.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Server\SendRegistration.cs" Line="1" Column="1" />
@@ -22,15 +17,6 @@
       <File FileName="Assets\Scripts\Layouts\Signup Layout\Camera\CameraManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Server\SendSMSCode.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Layouts\Signup Layout\Camera\CloseCamera.cs" Line="24" Column="4" />
-=======
-      <File FileName="Assets\Scripts\SwipeInput.cs" Line="16" Column="2" />
-      <File FileName="Assets\Scripts\CloseObject.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Server\SendRegistration.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Layouts\ChangeBetweenSignUpAndLogIn.cs" Line="38" Column="1" />
-      <File FileName="Assets\Scripts\Layouts\Login Layout\LoadingScreen\EndLoading.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Resources\SignUpResource.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Resources\LanguageScrolling.cs" Line="1" Column="1" />
->>>>>>> b56f826ba21ced46a4cc912a776f8ca9bd22339b
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
