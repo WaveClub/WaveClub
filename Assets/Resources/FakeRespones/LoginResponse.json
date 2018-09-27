@@ -1,0 +1,11 @@
+{
+"status_code" : 200,
+"id" : 1,
+"is_active": True,
+"lang": 'RU',
+"name": 'Pavel',
+"phone": '375297641154',
+"role": 'admin',
+"sex": 'm',
+"access_token": 'www'  
+}

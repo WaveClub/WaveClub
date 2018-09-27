@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.IO;
 
 public class SendLoginRequest : MonoBehaviour, IPointerUpHandler, IPointerDownHandler {
 	[Header("Credentials")]
@@ -61,7 +62,8 @@ public class SendLoginRequest : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 		body = credentials.SaveToString();
 		spinner.SetActive (true);
 
-		StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
+		response = File.ReadAllText("FakeRespones/LoginResponse.json");
+		//StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
 	}
 
 	public void OnPointerDown(PointerEventData eventData) {}

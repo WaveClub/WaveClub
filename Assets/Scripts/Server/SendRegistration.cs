@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.IO;
 
 public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHandler {
 	[Header("Fields")]
@@ -87,7 +88,8 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 			body = credentials.SaveToString();
 			spinner.SetActive (true);
 
-			StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
+			//StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
+			response = File.ReadAllText("FakeRespones/RegistrationResponse.json");
 		}
 
 	}
