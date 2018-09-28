@@ -62,7 +62,7 @@ public class SendLoginRequest : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 		body = credentials.SaveToString();
 		spinner.SetActive (true);
 
-		response = File.ReadAllText("FakeRespones/LoginResponse.json");
+		response = File.ReadAllText("Assets/Resources/FakeRespones/LoginResponse.json");
 		//StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
 	}
 
