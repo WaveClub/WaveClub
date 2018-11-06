@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ValidField : MonoBehaviour, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler {
+public class ValidField : MonoBehaviour, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler {
 
 	public Sprite validSprite;
 	public InputField field;
@@ -12,6 +12,11 @@ public class ValidField : MonoBehaviour, IPointerUpHandler, IPointerDownHandler,
 	public void OnBeginDrag(PointerEventData data)
 	{
 		field.DeactivateInputField();
+	}
+
+	public void OnDrag(PointerEventData eventData) {
+		field.DeactivateInputField();
+
 	}
 
 	public void OnPointerUp(PointerEventData eventData) {
