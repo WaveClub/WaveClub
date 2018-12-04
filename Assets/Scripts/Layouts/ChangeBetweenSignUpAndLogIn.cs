@@ -7,10 +7,10 @@ public class ChangeBetweenSignUpAndLogIn : MonoBehaviour, IPointerUpHandler, IPo
 	public GameObject signUp;
 	public GameObject logIn;
 
-	private float endPos = Screen.width/2;	
-	private float speed = -Screen.width/7;
+	private float endPos = Screen.width / 2;	
+	private float speed = -Screen.width / 7;
 
-	public void OnPointerUp(PointerEventData eventData){
+	public void OnPointerUp(PointerEventData eventData) {
 		if (signUp.transform.position.x == Screen.width / 2) {
 			signUp.transform.position += new Vector3 (Screen.width, 0, 0);
 		} else {

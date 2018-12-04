@@ -84,7 +84,9 @@ public class DrumScrolling : MonoBehaviour {
 		isScrolling = isScroll;
 		if (isScrolling) {
 			scrollRect.inertia = true;
-			Handheld.Vibrate ();
+			if (Vibration.HasVibrator()) {
+				Vibration.Vibrate(70);
+			}
 		}
 	}
 }
