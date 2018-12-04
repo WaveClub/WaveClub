@@ -44,8 +44,8 @@ public class Swipe : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHan
 
 	public void OnDrag(PointerEventData eventData) {
 		direction = eventData.position - _lastPosition;
-
-		if (eventData.position.x > _lastPosition.x) {				
+		Debug.Log (eventData.position.x);
+		if (signUp.transform.transform.position.x > Screen.width / 2 || direction.x > 0) {				
 			signUp.transform.position += new Vector3 (direction.x, 0, 0);
 		}
 		_lastPosition = eventData.position;
