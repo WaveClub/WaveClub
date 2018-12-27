@@ -1,15 +1,21 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Models\RequestModels\RegistrationRequestModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Server\SendRegistration.cs">
     <Files>
-      <File FileName="Assets\Scripts\StaticObject.cs" Line="11" Column="2" />
-      <File FileName="Assets\Models\Type\AccountModel.cs" Line="15" Column="1" />
+      <File FileName="Assets\Scripts\SwipeInput.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Server\SendRegistration.cs" Line="85" Column="29" />
+      <File FileName="Assets\Scripts\Swipe\Swipe.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Server\SendLoginRequest.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Server\RequestHelper.cs" Line="1" Column="1" />
+      <File FileName="Assets\Models\ResponseModels\LoginResponseModel.cs" Line="1" Column="1" />
+      <File FileName="Assets\Models\Type\AccountModel.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Server\SendSMSCode.cs" Line="33" Column="27" />
+      <File FileName="Assets\NativeEditPlugin\scripts\PluginMsgHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\NativeEditPlugin\scripts\NativeEditBox.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StaticObject.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Resources\SignUpResource.cs" Line="2" Column="34" />
       <File FileName="Assets\Models\RequestModels\CodeConfirmRequestModel.cs" Line="1" Column="1" />
-      <File FileName="Assets\Models\RequestModels\LoginRequestModel.cs" Line="1" Column="1" />
-      <File FileName="Assets\Models\RequestModels\RegistrationRequestModel.cs" Line="10" Column="24" />
-      <File FileName="Assets\Models\ResponseModels\BaseResponse.cs" Line="1" Column="1" />
-      <File FileName="Assets\Models\ResponseModels\LoginResponseModel.cs" Line="10" Column="1" />
-      <File FileName="Assets\Models\ResponseModels\RegistrationResponseModel.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CloseObject.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

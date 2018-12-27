@@ -17,6 +17,7 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 	public GameObject male;
 	public GameObject spinner;
     public GameObject codeConfirm;
+	public Text messageText;
 
 	private string body;
 	private string response;
@@ -72,11 +73,6 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
         codeConfirm.SetActive(true);
     }
 
-	/* public void ShowMessage(string message) {
-		UIMessage.SetActive (true);
-		UIMessageText.text = message;
-	} */
-
 	public void OnPointerUp(PointerEventData eventData) {
 		if ("false".Equals (PlayerPrefs.GetString ("isDragging"))) {
 			string sex = male.activeSelf ? "male" : "female";
@@ -84,12 +80,14 @@ public class SendRegistration : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 			if (CheckField ())
 				return;
 
-			RegistrationRequestModel credentials = new RegistrationRequestModel(loginField.text, nameField.text, passwordField.text, sex, StaticObject.RawImageToBase64String(StaticObject.PhotoFromCamera));
+			RegistrationRequestModel credentials = new RegistrationRequestModel(loginField.text, nameField.text, passwordField.text, sex, "dddd");//StaticObject.RawImageToBase64String(StaticObject.PhotoFromCamera));
 			body = credentials.SaveToString();
 			spinner.SetActive (true);
 
-			//StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
-			response = File.ReadAllText("FakeRespones/RegistrationResponse.json");
+			Debug.Log (credentials);
+
+			StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
+			Debug.Log ("success");
 		}
 
 	}

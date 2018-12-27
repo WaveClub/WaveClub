@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RequestHelper {
-	private const string url = "http://82.202.246.165/api/v1";
+	private const string url = "http://92.53.91.116";
 
 	public static IEnumerator PostRequest(string body, string method, System.Action<string> result)
 	{

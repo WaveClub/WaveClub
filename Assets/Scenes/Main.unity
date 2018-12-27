@@ -712,6 +712,7 @@ GameObject:
   - component: {fileID: 101794942}
   - component: {fileID: 101794941}
   - component: {fileID: 101794944}
+  - component: {fileID: 101794945}
   m_Layer: 5
   m_Name: Password Field
   m_TagString: Untagged
@@ -848,6 +849,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validSprite: {fileID: 21300000, guid: fee1fd7e300c63e4294aa3a323aab0cf, type: 3}
   field: {fileID: 101794941}
+--- !u!114 &101794945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 101794939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d94fbbbea60e45d68a29d0a9973dcb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  withDoneButton: 1
+  returnKeyType: 0
+  updateRectEveryFrame: 0
+  useInputFieldFont: 0
+  OnReturnPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnBeginEditing:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &104239605
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,6 +2206,7 @@ GameObject:
   - component: {fileID: 342082822}
   - component: {fileID: 342082825}
   - component: {fileID: 342082826}
+  - component: {fileID: 342082827}
   m_Layer: 5
   m_Name: Name Field Input
   m_TagString: Untagged
@@ -2343,6 +2370,31 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &342082827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 342082820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d94fbbbea60e45d68a29d0a9973dcb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  withDoneButton: 1
+  returnKeyType: 0
+  updateRectEveryFrame: 0
+  useInputFieldFont: 0
+  OnReturnPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnBeginEditing:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &345924209
 GameObject:
   m_ObjectHideFlags: 0
@@ -4378,6 +4430,46 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 696956650}
+--- !u!1 &728409496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 728409498}
+  - component: {fileID: 728409497}
+  m_Layer: 0
+  m_Name: PluginMsgHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &728409497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 728409496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26888b4265e1a4353aaf9c45987db8c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &728409498
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 728409496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &745528392
 GameObject:
   m_ObjectHideFlags: 0
@@ -5112,7 +5204,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 960
+  orthographic size: 346
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5237,6 +5329,7 @@ GameObject:
   - component: {fileID: 878494319}
   - component: {fileID: 878494318}
   - component: {fileID: 878494321}
+  - component: {fileID: 878494322}
   m_Layer: 5
   m_Name: Login Field
   m_TagString: Untagged
@@ -5373,6 +5466,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   validSprite: {fileID: 21300000, guid: fee1fd7e300c63e4294aa3a323aab0cf, type: 3}
   field: {fileID: 878494318}
+--- !u!114 &878494322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 878494316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d94fbbbea60e45d68a29d0a9973dcb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  withDoneButton: 1
+  returnKeyType: 0
+  updateRectEveryFrame: 0
+  useInputFieldFont: 0
+  OnReturnPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnBeginEditing:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &883936084
 GameObject:
   m_ObjectHideFlags: 0
@@ -6737,7 +6855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 12.4, y: -2.5}
   m_SizeDelta: {x: 1575, y: 2524}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1117693258
@@ -7390,6 +7508,7 @@ GameObject:
   - component: {fileID: 1275779425}
   - component: {fileID: 1275779428}
   - component: {fileID: 1275779429}
+  - component: {fileID: 1275779430}
   m_Layer: 5
   m_Name: Confirm Password Field
   m_TagString: Untagged
@@ -7553,6 +7672,31 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &1275779430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1275779423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d94fbbbea60e45d68a29d0a9973dcb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  withDoneButton: 1
+  returnKeyType: 0
+  updateRectEveryFrame: 0
+  useInputFieldFont: 0
+  OnReturnPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnBeginEditing:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1290641928
 GameObject:
   m_ObjectHideFlags: 0
@@ -8089,7 +8233,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 463028761}
   m_HandleRect: {fileID: 463028760}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8336,6 +8480,7 @@ GameObject:
   - component: {fileID: 1458320774}
   - component: {fileID: 1458320777}
   - component: {fileID: 1458320778}
+  - component: {fileID: 1458320779}
   m_Layer: 5
   m_Name: Login Field Input
   m_TagString: Untagged
@@ -8499,6 +8644,31 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &1458320779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1458320772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d94fbbbea60e45d68a29d0a9973dcb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  withDoneButton: 1
+  returnKeyType: 0
+  updateRectEveryFrame: 0
+  useInputFieldFont: 0
+  OnReturnPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnBeginEditing:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1464661296
 GameObject:
   m_ObjectHideFlags: 0
@@ -8580,6 +8750,7 @@ GameObject:
   - component: {fileID: 1469871871}
   - component: {fileID: 1469871874}
   - component: {fileID: 1469871875}
+  - component: {fileID: 1469871876}
   m_Layer: 5
   m_Name: Password Field Input
   m_TagString: Untagged
@@ -8743,6 +8914,31 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &1469871876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1469871869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d94fbbbea60e45d68a29d0a9973dcb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  withDoneButton: 1
+  returnKeyType: 0
+  updateRectEveryFrame: 0
+  useInputFieldFont: 0
+  OnReturnPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnBeginEditing:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1472754543
 GameObject:
   m_ObjectHideFlags: 0
@@ -10584,6 +10780,7 @@ MonoBehaviour:
   male: {fileID: 67262987}
   spinner: {fileID: 1884647778}
   codeConfirm: {fileID: 572073143}
+  messageText: {fileID: 0}
 --- !u!114 &1945079766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11067,7 +11264,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1984223086
 RectTransform:
   m_ObjectHideFlags: 0

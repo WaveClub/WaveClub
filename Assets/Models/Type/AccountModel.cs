@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class AccountModel {
 	public int id;
-	public bool is_active;
+	public bool is_confirmed;
 	public string lang;
 	public string name;
 	public string phone;
