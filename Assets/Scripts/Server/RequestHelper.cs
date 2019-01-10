@@ -11,7 +11,7 @@ public class RequestHelper {
 		postHeaders.Add ("Content-Type", "application/json");
 		postHeaders.Add ("Accept-Encoding", "gzip, deflate");
 
-		var data = System.Text.Encoding.ASCII.GetBytes(body.ToCharArray());
+		var data = System.Text.Encoding.UTF8.GetBytes(body.ToCharArray());
 
 		var response = new WWW(url + method, data, postHeaders);
 		yield return response;
