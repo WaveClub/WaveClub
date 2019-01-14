@@ -3969,6 +3969,7 @@ MonoBehaviour:
   cameraObject: {fileID: 338905985}
   photoImage: {fileID: 1708165621}
   rotationObject: {x: 0, y: 0, z: 0}
+  photo: {fileID: 1708165618}
 --- !u!114 &561530106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5204,7 +5205,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 346
+  orthographic size: 960
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
