@@ -5,12 +5,12 @@ using System.Text;
 using UnityEngine;
 
 public class CodeConfirmRequestModel {
-    public int user_id;
-    public string code;
+	public string PhoneNumber;
+    public int VerificationCode;
 
-    public CodeConfirmRequestModel(int user_id, string code) {
-        this.user_id = user_id;
-        this.code = code;
+	public CodeConfirmRequestModel(string phoneNumber, int verificationCode) {
+		PhoneNumber = phoneNumber;
+		VerificationCode = verificationCode;
     }
 
     public string SaveToString()

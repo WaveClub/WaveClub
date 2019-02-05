@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LoginRequestModel {
-	public string phone;
-	public string password;
+	public string PhoneNumber;
+	public string Password;
 
 	public LoginRequestModel(string phoneNumber, string pass) {
-		phone = phoneNumber;
-		password = pass;
+		PhoneNumber = phoneNumber;
+		Password = pass;
 	}
 
 	public string SaveToString() {

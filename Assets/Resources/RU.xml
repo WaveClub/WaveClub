@@ -17,4 +17,15 @@
       <your_name>Ваше Имя</your_name>
       <upload_photo>Загрузите вашу фотографию</upload_photo>
   </sign_up_section>
+  <response_messages>
+		<USER_NOT_EXISTS_OR_INCORRECT_PHONENUMBER_PASSWORD>Пользователь не существует или неверный Телефон // Пароль</USER_NOT_EXISTS_OR_INCORRECT_PHONENUMBER_PASSWORD>
+		<USER_IS_NOT_ACTIVATED_PLEASE_ACTIVATE_ACCOUNT>Пользователь не активирован, пожалуйста, активируйте аккаунт</USER_IS_NOT_ACTIVATED_PLEASE_ACTIVATE_ACCOUNT>
+		<SERVER_IS_NOT_AVAILABLE>Сервер недоступен</SERVER_IS_NOT_AVAILABLE>
+		<CODE_SENT>Код отправлен</CODE_SENT>
+		<USER_EXISTS>Пользователь существует</USER_EXISTS>
+		<USER_NOT_EXISTS>Пользователь не существует</USER_NOT_EXISTS>
+		<TIMEOUT_FOR_VERIFICATION>Тайм-аут для проверки</TIMEOUT_FOR_VERIFICATION>
+		<LIMIT_OF_CODE_VERIFICATION_ATTEMPTS_EXCEEDED>Превышен лимит попыток проверки кода</LIMIT_OF_CODE_VERIFICATION_ATTEMPTS_EXCEEDED>
+		<INVALID_VERIFICATION_CODE>Неверный код подтверждения</INVALID_VERIFICATION_CODE>
+	</response_messages>
 </main>

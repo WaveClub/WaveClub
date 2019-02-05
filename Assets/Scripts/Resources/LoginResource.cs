@@ -13,9 +13,18 @@ public class LoginResource : MonoBehaviour {
 	public Text welcomeToWaveclub;
 
 	private const string xpath = "login_section";
+	private string curLanguage;
 
 	void Start () {
+		curLanguage = LocalizationManager.Instance.LanguageCode;
 		LoadLocalization ();
+	}
+
+	void Update () {
+		if (curLanguage != LocalizationManager.Instance.LanguageCode) {
+			curLanguage = LocalizationManager.Instance.LanguageCode;
+			this.LoadLocalization ();
+		}
 	}
 
 	public void LoadLocalization() {

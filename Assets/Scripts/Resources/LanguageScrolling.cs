@@ -58,6 +58,9 @@ public class LanguageScrolling : MonoBehaviour {
 			instLanguages [i].transform.localScale = instLanguagesScale [i];
 		}
 
+		if (languages [selectedLanguage] != LocalizationManager.Instance.LanguageCode)
+			LocalizationManager.Instance.LanguageCode = languages [selectedLanguage];
+
 		float scrollVelocity = Mathf.Abs (languageScroll.velocity.x);
 		if (scrollVelocity < 400 && !isScrolling) {
 			languageScroll.inertia = false;

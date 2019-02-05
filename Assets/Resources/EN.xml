@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <main>
-  <login_section>
-      <forgotten_password>Forgotten password?</forgotten_password>
-      <sign_in>Sign in</sign_in>
-      <sign_up>Sign Up</sign_up>
-      <your_login>Your login</your_login>
-      <your_password>Your password</your_password>
-      <welcome_to_waveclub>Welcome to WaveClub!</welcome_to_waveclub>
-  </login_section>
-  <sign_up_section>
-      <confirm>Confirm</confirm>
-      <confirm_password>Confirm password</confirm_password>
-      <create_password>Create password</create_password>
-      <select_your_sex>Select your sex</select_your_sex>
-      <your_login>Your login</your_login>
-      <your_name>Name</your_name>
-      <upload_photo>Upload photo</upload_photo>
-  </sign_up_section>
+	<login_section>
+		<forgotten_password>Forgotten password?</forgotten_password>
+		<sign_in>Sign in</sign_in>
+		<sign_up>Sign Up</sign_up>
+		<your_login>Your login</your_login>
+		<your_password>Your password</your_password>
+		<welcome_to_waveclub>Welcome to WaveClub!</welcome_to_waveclub>
+	</login_section>
+	<sign_up_section>
+		<confirm>Confirm</confirm>
+		<confirm_password>Confirm password</confirm_password>
+		<create_password>Create password</create_password>
+		<select_your_sex>Select your sex</select_your_sex>
+		<your_login>Your login</your_login>
+		<your_name>Name</your_name>
+		<upload_photo>Upload photo</upload_photo>
+	</sign_up_section>
+	<response_messages>
+		<USER_NOT_EXISTS_OR_INCORRECT_PHONENUMBER_PASSWORD>User not exists or incorrect Phone // Password</USER_NOT_EXISTS_OR_INCORRECT_PHONENUMBER_PASSWORD>
+		<USER_IS_NOT_ACTIVATED_PLEASE_ACTIVATE_ACCOUNT>User isn't activated, please activate account</USER_IS_NOT_ACTIVATED_PLEASE_ACTIVATE_ACCOUNT>
+		<SERVER_IS_NOT_AVAILABLE>Server isn't available</SERVER_IS_NOT_AVAILABLE>
+		<CODE_SENT>Code sent</CODE_SENT>
+		<USER_EXISTS>User exists</USER_EXISTS>
+		<USER_NOT_EXISTS>User not exists</USER_NOT_EXISTS>
+		<TIMEOUT_FOR_VERIFICATION>Timeout for verification</TIMEOUT_FOR_VERIFICATION>
+		<LIMIT_OF_CODE_VERIFICATION_ATTEMPTS_EXCEEDED>Limit of code verification attempts exceeded</LIMIT_OF_CODE_VERIFICATION_ATTEMPTS_EXCEEDED>
+		<INVALID_VERIFICATION_CODE>Invalid verification code</INVALID_VERIFICATION_CODE>
+	</response_messages>
 </main>

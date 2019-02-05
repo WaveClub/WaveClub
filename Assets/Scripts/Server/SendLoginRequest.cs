@@ -9,61 +9,52 @@ public class SendLoginRequest : MonoBehaviour, IPointerUpHandler, IPointerDownHa
 	[Header("Credentials")]
 	public InputField phoneField;
 	public InputField passwordField;
+
 	[Header("Sprites")]
 	public Sprite incorrectFieldSprite;
+
 	[Header("Game Objects")]
-	public GameObject spinner;
-	public GameObject mainMenu;
+	public GameObject UIMenu;
 
 	private string body;
 	private string response;
-	private const string method = "/login";
+	private const string method = "/Token/Authentication?";
 
 	void Update () {
 		if (response != null) {
-			var responseData = JsonUtility.FromJson<LoginResponseModel> (response);
-			spinner.SetActive (false);
-			switch (responseData.status_code) {
+			var responseData = JsonUtility.FromJson<UserIdentifier> (response);
+			PlayerPrefs.SetString ("UserIdentifier", JsonUtility.ToJson(responseData));
 
-			case (int) StatusCode.INVALID_CREDENTIALS:
-				phoneField.image.sprite = incorrectFieldSprite;
-				passwordField.image.sprite = incorrectFieldSprite;
-				passwordField.text = string.Empty;
-				break;
-
-			case (int) StatusCode.OK:
-				Debug.Log (responseData.access_token);
-				PlayerPrefs.SetString ("access_token", responseData.access_token);
-				mainMenu.SetActive (true);
-				break;
-
-			}
+			ClearField ();
+			UIMenu.SetActive (true);
 
 			response = null;
 		}
 	}
 
-	public bool checkField() {
-		if (phoneField.text == string.Empty)
-			phoneField.image.sprite = incorrectFieldSprite;
-		if (passwordField.text == string.Empty)
-			passwordField.image.sprite = incorrectFieldSprite;
-
-		if (phoneField.text == string.Empty || passwordField.text == string.Empty)
-			return true;
-		return false;
-	}
-
 	public void OnPointerUp(PointerEventData eventData) {
-		if (checkField ())
+		if (CheckField ())
 			return;
 
 		LoginRequestModel credentials = new LoginRequestModel (phoneField.text, passwordField.text);
 		body = credentials.SaveToString();
-		spinner.SetActive (true);
 
-		StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
+		StartCoroutine (RequestHelper.GetRequest (method + "phoneNumber=" + phoneField.text + "&password=" + passwordField.text, (result) => response = result));
 	}
 
 	public void OnPointerDown(PointerEventData eventData) {}
+
+	private void ClearField() {
+		phoneField.text = passwordField.text = string.Empty;
+	}
+
+	private bool CheckField() {
+		if (phoneField.text == string.Empty)
+			phoneField.image.sprite = incorrectFieldSprite;
+		
+		if (passwordField.text == string.Empty)
+			passwordField.image.sprite = incorrectFieldSprite;
+
+		return phoneField.text == string.Empty || passwordField.text == string.Empty;
+	}
 }

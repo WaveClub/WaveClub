@@ -15,15 +15,6 @@ public class LocalizationManager {
 		}
 	}
 
-	private TextAsset LoadResource() {
-		return Resources.Load (LanguageCode, typeof(TextAsset)) as TextAsset;
-	}
-
-	private LocalizationManager() {
-		if (LanguageCode == null)
-			LanguageCode = "RU";
-	}
-
 	public static Dictionary<string, string> getConfig(string xpath) {
 		XmlDocument doc = new XmlDocument ();
 		Dictionary<string, string> result = new Dictionary<string, string> ();
@@ -38,5 +29,14 @@ public class LocalizationManager {
             }
         }
 		return result;
+	}
+
+	private TextAsset LoadResource() {
+		return Resources.Load (LanguageCode, typeof(TextAsset)) as TextAsset;
+	}
+
+	private LocalizationManager() {
+		if (LanguageCode == null)
+			LanguageCode = "RU";
 	}
 }

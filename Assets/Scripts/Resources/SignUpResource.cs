@@ -12,10 +12,19 @@ public class SignUpResource : MonoBehaviour {
 	public Text yourName;
 	public Text uploadPhoto;
 
-    private const string xpath = "sign_up_section";
+	private const string xpath = "sign_up_section";
+	private string curLanguage;
 
 	void Start () {
+		curLanguage = LocalizationManager.Instance.LanguageCode;
 		LoadLocalization ();
+	}
+
+	void Update () {
+		if (curLanguage != LocalizationManager.Instance.LanguageCode) {
+			curLanguage = LocalizationManager.Instance.LanguageCode;
+			this.LoadLocalization ();
+		}
 	}
 
 	public void LoadLocalization() {

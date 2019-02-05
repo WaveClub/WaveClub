@@ -7,45 +7,29 @@ using UnityEngine.EventSystems;
 public class SendSMSCode : MonoBehaviour, IPointerUpHandler, IPointerDownHandler {
 	[Header("Fields")]
     public InputField codeConfirmField;
+
 	[Header("Sprites")]
 	public Sprite incorrectFieldSprite;
+
 	[Header("Game Objects")]
-	public GameObject spinner;
-	public GameObject logIn;
-	public GameObject signUp;
 	public GameObject codeConfirm;
+	public GameObject UIMenu;
 
-    private string body;
     private string response;
-    private const string method = "/acceptcode";
-
-    public static RegistrationResponseModel registrationResponseModel;
+    private const string method = "/Token/Verification";
 
     void Update () {
         if (response != null)
         {
-            var responseData = JsonUtility.FromJson<RegistrationResponseModel>(response);
-			spinner.SetActive (false);
-            switch (responseData.status_code)
-            {
-                case (int)StatusCode.USER_EXISTS:
-                    // ShowMessage("User with this phone number already exists!");
-                    break;
-				case (int)StatusCode.OK:
-					logIn.SetActive (true);
-					signUp.SetActive (false);
-					codeConfirm.SetActive (false);
-                    break;
-            }
+			VerificationResponseModel responseData = JsonUtility.FromJson<VerificationResponseModel>(response);
+			PlayerPrefs.SetString ("UserIdentifier", JsonUtility.ToJson(responseData.User));
+
+			codeConfirmField.text = string.Empty;
+			codeConfirm.SetActive (false);
+			UIMenu.SetActive (true);
             response = null;
         }
     }
-
-    /* public void ShowMessage(string message)
-    {
-        UIMessage.SetActive(true);
-        UIMessageText.text = message;
-    } */
 
     public bool CheckField() {
 		if (codeConfirmField.text == string.Empty) {
@@ -60,11 +44,13 @@ public class SendSMSCode : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         if (CheckField())
             return;
 
-		CodeConfirmRequestModel credentials = new CodeConfirmRequestModel(registrationResponseModel.user_id, codeConfirmField.text);
-        body = credentials.SaveToString();
-		spinner.SetActive (true);
-
-        StartCoroutine(RequestHelper.PostRequest(body, method, (result) => response = result));
+		int verificationCode;
+		if (int.TryParse (codeConfirmField.text, out verificationCode)) {
+			CodeConfirmRequestModel credentials = new CodeConfirmRequestModel (PlayerPrefs.GetString ("PhoneNumber"), verificationCode);
+			StartCoroutine (RequestHelper.PostRequest (credentials.SaveToString (), method, (result) => response = result));
+		} else {
+			codeConfirmField.image.sprite = incorrectFieldSprite;
+		}
     }
 
     public void OnPointerDown(PointerEventData eventData) { }
