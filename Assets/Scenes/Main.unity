@@ -2279,6 +2279,7 @@ GameObject:
   - component: {fileID: 338905986}
   - component: {fileID: 338905988}
   - component: {fileID: 338905987}
+  - component: {fileID: 338905989}
   m_Layer: 5
   m_Name: Camera
   m_TagString: Untagged
@@ -2337,6 +2338,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 338905985}
+--- !u!114 &338905989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338905985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0aa290a0569c23449f57de9b129692b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signUp: {fileID: 1889094260}
+  photoImage: {fileID: 0}
+  avatar: {fileID: 0}
+  OnSwipeStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSwipeEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSwipe:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &342082820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,6 +2529,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signUp: {fileID: 1984223085}
+  photoImage: {fileID: 0}
+  avatar: {fileID: 0}
   OnSwipeStart:
     m_PersistentCalls:
       m_Calls: []
@@ -4128,6 +4160,7 @@ MonoBehaviour:
   photoImage: {fileID: 1708165621}
   rotationObject: {x: 0, y: 0, z: 0}
   photo: {fileID: 1708165618}
+  Camera: {fileID: 1889094260}
 --- !u!114 &561530106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5362,7 +5395,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 209
+  orthographic size: 960
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6152,6 +6185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   signUp: {fileID: 1984223085}
   logIn: {fileID: 386318500}
+  Camera: {fileID: 0}
 --- !u!114 &937038387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7814,6 +7848,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signUp: {fileID: 1984223085}
+  photoImage: {fileID: 0}
+  avatar: {fileID: 0}
   OnSwipeStart:
     m_PersistentCalls:
       m_Calls: []
@@ -8854,6 +8890,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signUp: {fileID: 1984223085}
+  photoImage: {fileID: 0}
+  avatar: {fileID: 0}
   OnSwipeStart:
     m_PersistentCalls:
       m_Calls: []
@@ -9124,6 +9162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signUp: {fileID: 1984223085}
+  photoImage: {fileID: 0}
+  avatar: {fileID: 0}
   OnSwipeStart:
     m_PersistentCalls:
       m_Calls: []
@@ -10447,6 +10487,7 @@ GameObject:
   - component: {fileID: 1889094261}
   - component: {fileID: 1889094264}
   - component: {fileID: 1889094263}
+  - component: {fileID: 1889094262}
   m_Layer: 5
   m_Name: Phone Camera
   m_TagString: Untagged
@@ -10474,6 +10515,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1889094262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1889094260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0aa290a0569c23449f57de9b129692b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signUp: {fileID: 1889094260}
+  photoImage: {fileID: 1708165621}
+  avatar: {fileID: 21300000, guid: e57510963bc08084fa4680acc7d1ee46, type: 3}
+  OnSwipeStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSwipeEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSwipe:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Events+Vector2, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &1889094263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10589,6 +10659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   signUp: {fileID: 1984223085}
   logIn: {fileID: 386318500}
+  Camera: {fileID: 1889094260}
 --- !u!1 &1900725526
 GameObject:
   m_ObjectHideFlags: 0
@@ -11760,6 +11831,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   signUp: {fileID: 1984223085}
+  photoImage: {fileID: 0}
+  avatar: {fileID: 0}
   OnSwipeStart:
     m_PersistentCalls:
       m_Calls: []
