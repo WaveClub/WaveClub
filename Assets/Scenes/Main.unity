@@ -2352,6 +2352,7 @@ MonoBehaviour:
   signUp: {fileID: 1889094260}
   photoImage: {fileID: 0}
   avatar: {fileID: 0}
+  avatarIcon: {fileID: 0}
   OnSwipeStart:
     m_PersistentCalls:
       m_Calls: []
@@ -2531,6 +2532,7 @@ MonoBehaviour:
   signUp: {fileID: 1984223085}
   photoImage: {fileID: 0}
   avatar: {fileID: 0}
+  avatarIcon: {fileID: 0}
   OnSwipeStart:
     m_PersistentCalls:
       m_Calls: []
@@ -4846,6 +4848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationObject: {x: 0, y: 0, z: 0}
+  photoImage: {fileID: 0}
 --- !u!114 &749622235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6186,6 +6189,7 @@ MonoBehaviour:
   signUp: {fileID: 1984223085}
   logIn: {fileID: 386318500}
   Camera: {fileID: 0}
+  avatarIcon: {fileID: 0}
 --- !u!114 &937038387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7850,6 +7854,7 @@ MonoBehaviour:
   signUp: {fileID: 1984223085}
   photoImage: {fileID: 0}
   avatar: {fileID: 0}
+  avatarIcon: {fileID: 0}
   OnSwipeStart:
     m_PersistentCalls:
       m_Calls: []
@@ -8892,6 +8897,7 @@ MonoBehaviour:
   signUp: {fileID: 1984223085}
   photoImage: {fileID: 0}
   avatar: {fileID: 0}
+  avatarIcon: {fileID: 0}
   OnSwipeStart:
     m_PersistentCalls:
       m_Calls: []
@@ -9164,6 +9170,7 @@ MonoBehaviour:
   signUp: {fileID: 1984223085}
   photoImage: {fileID: 0}
   avatar: {fileID: 0}
+  avatarIcon: {fileID: 0}
   OnSwipeStart:
     m_PersistentCalls:
       m_Calls: []
@@ -9783,6 +9790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationObject: {x: 0, y: 0, z: 0}
+  photoImage: {fileID: 1708165621}
 --- !u!1 &1722912279
 GameObject:
   m_ObjectHideFlags: 0
@@ -10528,7 +10536,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   signUp: {fileID: 1889094260}
   photoImage: {fileID: 1708165621}
-  avatar: {fileID: 21300000, guid: e57510963bc08084fa4680acc7d1ee46, type: 3}
+  avatar: {fileID: 21300000, guid: f3a878481826b9249876abfbd7b71c04, type: 3}
+  avatarIcon: {fileID: 550424574}
   OnSwipeStart:
     m_PersistentCalls:
       m_Calls: []
@@ -10660,6 +10669,7 @@ MonoBehaviour:
   signUp: {fileID: 1984223085}
   logIn: {fileID: 386318500}
   Camera: {fileID: 1889094260}
+  avatarIcon: {fileID: 550424574}
 --- !u!1 &1900725526
 GameObject:
   m_ObjectHideFlags: 0
@@ -11833,6 +11843,7 @@ MonoBehaviour:
   signUp: {fileID: 1984223085}
   photoImage: {fileID: 0}
   avatar: {fileID: 0}
+  avatarIcon: {fileID: 0}
   OnSwipeStart:
     m_PersistentCalls:
       m_Calls: []
